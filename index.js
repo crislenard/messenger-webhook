@@ -25,7 +25,15 @@ app.post('/webhook', (req, res) => {
         let webhook_event = entry.messaging[0];
         console.log(webhook_event);
       });
-  
+          let messaging_events = req.body.entry[0].messaging
+            for (let i = 0; i < messaging_events.length; i++) {
+              let event = messaging_events[i]
+              let sender = event.sender.id
+              if (event.message && event.message.text) {
+                let text = event.message.text
+                sendText(sender, "Text echo: " + text.substring(0, 100))
+              }
+            }
       // Returns a '200 OK' response to all requests
       res.status(200).send('EVENT_RECEIVED');
     } else {
@@ -56,16 +64,6 @@ app.get('/webhook', (req, res) => {
         // Responds with the challenge token from the request
         console.log('WEBHOOK_VERIFIED');
         res.status(200).send(challenge);
-
-        let messaging_events = req.body.entry[0].messaging
-          for (let i = 0; i < messaging_events.length; i++) {
-            let event = messaging_events[i]
-            let sender = event.sender.id
-            if (event.message && event.message.text) {
-              let text = event.message.text
-              sendText(sender, "Text echo: " + text.substring(0, 100))
-            }
-          }
       
       } else {
         // Responds with '403 Forbidden' if verify tokens do not match
