@@ -32,6 +32,7 @@ app.post('/webhook', (req, res) => {
       // Get the sender PSID
       let sender_psid = webhook_event.sender.id;
       console.log('Sender PSID: ' + sender_psid);
+      
 
        // Check if the event is a message or postback and
       // pass the event to the appropriate handler function
@@ -81,6 +82,15 @@ app.get('/webhook', (req, res) => {
   });
 
 
+  app.get('/show-webview', (request, response) => {
+    response.sendFile();
+  });
+
+  app.get('/show-buttons', (request, response) => {
+
+  });
+
+
   // Handles messages events
 function handleMessage(sender_psid, received_message) {
   let response;
@@ -89,9 +99,35 @@ function handleMessage(sender_psid, received_message) {
   if (received_message.text) {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
-    response = {
-      "text": `You sent the message: "${received_message.text}". Now send me an attachment!`
+    if(received_message.text == "Go web!"){
+      response = {
+        "attachment" : {
+          type: 'template',
+          payload: {
+            template_type : 'generic',
+            image_aspect_ratio: 'square',
+            elements: [{
+              title: `Up up and away web!`,
+              subtitle: 'Click to open my web.',
+              buttons: [
+                {
+                  type: 'web_url',
+                  url: 'https://test-messenger-web.herokuapp.com/',
+                  title: 'Sling WebView',
+                  messenger_extensions: true,
+                  web_height_ratio: 'full'
+                }
+              ]
+            }]
+          }
+        }
+      }
+    }else{
+      response = {
+        "text": `You sent the message: "${received_message.text}". Now send me an attachment!`
+      }
     }
+    
   } else if (received_message.attachments) {
     // Get the URL of the message attachment
     let attachment_url = received_message.attachments[0].payload.url;
