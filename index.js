@@ -1,6 +1,6 @@
 'use strict';
 
-const PAGE_ACCESS_TOKEN = "EAAGraXlpEdMBAJ92lNpDt6iDSOsTAt3jjZBA9YyoMFD8C78d64MxE9ZBnRAVfN3ZBYE8NZBdtUcQSZClJLsA9syjJmb42ahlUb1zy8zldBCMlVnyGZBPtQ9HLkmpKFeLGNkZCjVhZAEWSqYKrLR7zOyQm7U3O45ZB97nkuiOkkKWuDFL2g32ijmT7";
+const PAGE_ACCESS_TOKEN = process.env.PAGE_ACCESS_TOKEN;
 // Imports dependencies and set up http server
 const
   express = require('express'),
