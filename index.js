@@ -101,23 +101,22 @@ function handleMessage(sender_psid, received_message) {
     // will be added to the body of our request to the Send API
     if(received_message.text == "Go web!"){
       response = {
-        "attachment" : {
-          type: 'template',
-          payload: {
-            template_type : 'generic',
-            image_aspect_ratio: 'square',
-            elements: [{
-              title: `Up up and away web!`,
-              subtitle: 'Click to open my web.',
-              buttons: [
+        "attachment": {
+          "type": "template",
+          "payload": {
+            "template_type": "generic",
+            "elements": [{
+              "title": "Up up and away Web!",
+              "subtitle": "phew phew phew",
+              "buttons": [
                 {
-                  type: 'web_url',
-                  url: 'https://test-messenger-web.herokuapp.com/',
-                  title: 'Sling WebView',
+                  "type": "web_url",
+                  "title": "Sling web!",
+                  web_height_ratio: 'full',
                   messenger_extensions: true,
-                  web_height_ratio: 'full'
+                  url: 'https://test-messenger-web.herokuapp.com/'
                 }
-              ]
+              ],
             }]
           }
         }
