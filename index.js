@@ -82,13 +82,13 @@ app.get('/webhook', (req, res) => {
   });
 
 
-  app.get('/show-webview', (request, response) => {
-    response.sendFile('https://test-messenger-web.herokuapp.com/');
-  });
+  // app.get('/show-webview', (request, response) => {
+  //   response.sendFile('https://test-messenger-web.herokuapp.com/');
+  // });
 
-  app.get('/show-buttons', (request, response) => {
+  // app.get('/show-buttons', (request, response) => {
 
-  });
+  // });
 
 
   // Handles messages events
