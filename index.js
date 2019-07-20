@@ -118,7 +118,44 @@ function handleMessage(sender_psid, received_message) {
           }
       }
       }
-    }else{
+    }
+    else if(received_message.text == "Fly!"){
+      response = {
+        attachment: {
+          type: "template",
+          payload: {
+              template_type: "button",
+              text: "Go web! Fly!",
+              buttons: [{
+                  type: "web_url",
+                  url: "https://test-messenger-web.herokuapp.com",
+                  title: "Sling Webview",
+                  webview_height_ratio: "tall",
+                  messenger_extensions: true
+              }]
+          }
+      }
+      }
+    }
+    else if(received_message.text == "Go!"){
+      response = {
+        attachment: {
+          type: "template",
+          payload: {
+              template_type: "button",
+              text: "Go web! Fly!",
+              buttons: [{
+                  type: "web_url",
+                  url: "https://test-messenger-web.herokuapp.com",
+                  title: "Sling Webview",
+                  webview_height_ratio: "compact",
+                  messenger_extensions: true
+              }]
+          }
+      }
+      }
+    }
+    else{
       response = {
         "text": `You sent the message: "${received_message.text}". Now send me an attachment!`
       }
