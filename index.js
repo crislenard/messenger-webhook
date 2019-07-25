@@ -148,7 +148,6 @@ function handleMessage(sender_psid, received_message) {
                   "type": "account_link",
                   url: "https://test-messenger-web.herokuapp.com",
                   title: "Show Account Linking",
-                  webview_height_ratio: "compact",
 
               }]
           }
