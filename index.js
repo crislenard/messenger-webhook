@@ -145,9 +145,9 @@ function handleMessage(sender_psid, received_message) {
               template_type: "button",
               text: "Go web! Fly!",
               buttons: [{
-                  type: "web_url",
+                  type: "account_link",
                   url: "https://test-messenger-web.herokuapp.com",
-                  title: "Sling Webview",
+                  title: "Show Account Linking",
                   webview_height_ratio: "compact",
                   messenger_extensions: true
               }]
