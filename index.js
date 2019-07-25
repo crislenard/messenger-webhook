@@ -147,9 +147,9 @@ function handleMessage(sender_psid, received_message) {
               buttons: [{
                   "type": "account_link",
                   url: "https://test-messenger-web.herokuapp.com",
-                  // title: "Show Account Linking",
-                  // webview_height_ratio: "compact",
-                  // messenger_extensions: true
+                  title: "Show Account Linking",
+                  webview_height_ratio: "compact",
+
               }]
           }
       }
