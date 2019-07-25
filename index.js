@@ -148,7 +148,6 @@ function handleMessage(sender_psid, received_message) {
                 "type":"account",
                 "url":"https://www.messenger.com/",
                 "title":"Account Linking",
-                "webview_height_ratio":"tall"
               }],
           },
       },
