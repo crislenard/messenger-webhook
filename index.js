@@ -128,7 +128,7 @@ function handleMessage(sender_psid, received_message) {
               text: "Go web! Fly!",
               buttons: [{
                   type: "web_url",
-                  url: "https://m.gcash.com/gcashapp/gcash-messenger-user-onboarding/index.html",
+                  url: "http://10.14.2.15:8080",
                   title: "Sling Webview",
                   webview_height_ratio: "tall",
               }]
@@ -145,7 +145,7 @@ function handleMessage(sender_psid, received_message) {
               text: "Go web! Fly!",
               buttons: [{
                 "type":"account",
-                "url":"https://www.messenger.com/",
+                "url":"http://10.14.2.15:8080",
                 "title":"Account Linking",
               }],
           },
