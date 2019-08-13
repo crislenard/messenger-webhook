@@ -110,7 +110,7 @@ function handleMessage(sender_psid, received_message) {
               text: "Go web! Fly!",
               buttons: [{
                   type: "web_url",
-                  url: "10.14.2.15:8080",
+                  url: "https://10.14.2.15:8080",
                   title: "Sling Webview",
                   webview_height_ratio: "full",
                   messenger_extensions: true
@@ -144,9 +144,10 @@ function handleMessage(sender_psid, received_message) {
               template_type: "button",
               text: "Go web! Fly!",
               buttons: [{
-                "type":"account",
-                "url":"http://10.14.2.15:8080",
-                "title":"Account Linking",
+                type: "web_url",
+                url: "https://test-messenger-web.herokuapp.com",
+                title: "Sling Webview",
+                webview_height_ratio: "tall",
               }],
           },
       },
