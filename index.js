@@ -136,7 +136,7 @@ function handleMessage(sender_psid, received_message) {
       }
       }
     }
-    else if(received_message.text == "Go!"){
+    else if(received_message.text == "Go web!"){
       response = {
         attachment: {
           type: "template",
