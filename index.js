@@ -128,7 +128,7 @@ function handleMessage(sender_psid, received_message) {
               text: "Go web! Fly!",
               buttons: [{
                   type: "web_url",
-                  url: "http://10.14.2.15:8080",
+                  url: "http://uat.m.gcash.com/gcashapp/gcash-messenger-web/1.0.0/index.html#/",
                   title: "Sling Webview",
                   webview_height_ratio: "tall",
               }]
@@ -148,6 +148,7 @@ function handleMessage(sender_psid, received_message) {
                 url: "https://test-messenger-web.herokuapp.com",
                 title: "Sling Webview",
                 webview_height_ratio: "tall",
+                messenger_extensions: true,
               }],
           },
       },
