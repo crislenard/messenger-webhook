@@ -113,7 +113,6 @@ function handleMessage(sender_psid, received_message) {
                   url: "http://uat.m.gcash.com/gcashapp/gcash-messenger-web/1.0.0/index.html#/",
                   title: "Sling Webview",
                   webview_height_ratio: "full",
-                  messenger_extensions: true
               }]
           }
       }
@@ -128,9 +127,10 @@ function handleMessage(sender_psid, received_message) {
               text: "Go web! Fly!",
               buttons: [{
                   type: "web_url",
-                  url: "http://uat.m.gcash.com/gcashapp/gcash-messenger-web/1.0.0/index.html#/",
+                  url: "http://uat.m.gcash.com/gcashapp/gcash-messenger-web/1.0.0/index.html#/?psid=2269378053099266",
                   title: "Sling Webview",
                   webview_height_ratio: "tall",
+                  messenger_extensions: true,
               }]
           }
       }
