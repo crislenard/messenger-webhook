@@ -101,7 +101,7 @@ function handleMessage(sender_psid, received_message) {
   if (received_message.text) {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
-    if(received_message.text == "Go!"){
+    if(received_message.text == "Home"){
       response = {
         attachment: {
           type: "template",
@@ -110,15 +110,15 @@ function handleMessage(sender_psid, received_message) {
               text: "Go web! Fly!",
               buttons: [{
                   type: "web_url",
-                  url: "http://uat.m.gcash.com/gcashapp/gcash-messenger-web/1.0.0/index.html#/?psid=123456789",
+                  url: "http://uat.m.gcash.com/gcashapp/gcash-messenger-web/1.0.0/index.html#/home",
                   title: "Sling Webview",
-                  webview_height_ratio: "full",
+                  webview_height_ratio: "tall",
               }]
           }
       }
       }
     }
-    else if(received_message.text == "Fly!"){
+    else if(received_message.text == "Load"){
       response = {
         attachment: {
           type: "template",
