@@ -130,6 +130,7 @@ function handleMessage(sender_psid, received_message) {
                   url: "http://uat.m.gcash.com/gcashapp/gcash-messenger-web/1.0.0/index.html#/?psid=123456789",
                   title: "Sling Webview",
                   webview_height_ratio: "tall",
+                  messenger_extensions: true,
               }]
           }
       }
