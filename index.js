@@ -110,7 +110,7 @@ function handleMessage(sender_psid, received_message) {
               text: "Go web! Fly!",
               buttons: [{
                   type: "web_url",
-                  url: "http://uat.m.gcash.com/gcashapp/gcash-messenger-web/1.0.0/index.html#/home",
+                  url: "https://s3.ap-southeast-1.amazonaws.com/uat.m.gcash.com/gcashapp/gcash-messenger-web/1.0.0/index.html#/home",
                   title: "Sling Webview",
                   webview_height_ratio: "tall",
               }]
@@ -127,9 +127,9 @@ function handleMessage(sender_psid, received_message) {
               text: "Go web! Fly!",
               buttons: [{
                   type: "web_url",
-                  url: "http://uat.m.gcash.com/gcashapp/gcash-messenger-web/1.0.0/index.html#/?psid=123456789",
+                  url: "https://s3.ap-southeast-1.amazonaws.com/uat.m.gcash.com/gcashapp/gcash-messenger-web/1.0.0/index.html#/",
                   title: "Sling Webview",
-                  webview_height_ratio: "tall",
+                  webview_height_ratio: "full",
                   messenger_extensions: true,
               }]
           }
@@ -145,7 +145,7 @@ function handleMessage(sender_psid, received_message) {
               text: "Go web! Fly!",
               buttons: [{
                 type: "web_url",
-                url: "https://uat.m.gcash.com/gcashapp/gcash-messenger-web/1.0.0/index.html#/?psid=123456789",
+                url: "https://s3.ap-southeast-1.amazonaws.com/uat.m.gcash.com/gcashapp/gcash-messenger-web/1.0.0/index.html#/",
                 title: "Sling Webview",
                 webview_height_ratio: "tall",
                 messenger_extensions: true,
